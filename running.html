@@ -1,0 +1,49 @@
+<section class="container my-5">
+  <h2>Running</h2>
+
+  <p>Running has always been a major part of my life. It’s not just a sport, it’s a discipline and a way to stay balanced...</p>
+
+  <p>I’m especially inspired by BYU’s collegiate running program...</p>
+
+  <div class="section">
+    <h4>Highlight Video: Conner Mantz Training</h4>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ymZ4RoN7oEw" title="Conner Mantz Highlight" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h4>Image of Kenneth Rooks Steeplechase Victory</h4>
+    <img src="kenneth-rooks.png" alt="Kenneth Rooks winning steeplechase" width="100%">
+  </div>
+
+  <div class="section">
+    <h4>My Weekly Training Plan</h4>
+    <ol>
+      <li>Monday – Long Run<ul><li>8 miles steady pace</li></ul></li>
+      <li>Tuesday – Intervals<ul><li>6x800m</li></ul></li>
+      <li>Wednesday – Recovery<ul><li>4-5 miles</li></ul></li>
+      <li>Thursday – Tempo<ul><li>3 miles</li></ul></li>
+      <li>Friday – Hill Repeats<ul><li>10 sprints</li></ul></li>
+      <li>Saturday – Race</li>
+      <li>Sunday – Rest</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h4>Interactive Tableau Graph</h4>
+    <p><a href="https://public.tableau.com/views/RunningPerformanceSummary/RaceParticipationTrends" target="_blank">Click here to view the Tableau visualization</a>.</p>
+  </div>
+
+  <div class="section">
+    <h4>AI Joke Generator</h4>
+    <p id="jokeText">Click below to get a joke!</p>
+    <button class="btn btn-secondary" onclick="getJoke()">Tell Me a Joke</button>
+  </div>
+</section>
+
+<script>
+  async function getJoke() {
+    const res = await fetch('https://official-joke-api.appspot.com/random_joke');
+    const data = await res.json();
+    document.getElementById('jokeText').textContent = `${data.setup} — ${data.punchline}`;
+  }
+</script>
